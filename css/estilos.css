@@ -106,20 +106,25 @@ main {
     top: 0px;
 }
 50%{
-   
-   left: 300px; 
+
+   left: 300px;
    top: 0;
 }
 75%{
-   
+
     left: 0px;
     top: 0px;
 }
 100%{
-    
+
     left: 0px;
     top: 0px;
-}   
+}
+}
+
+#imagenCentrada{
+  justify-self: center;
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -128,34 +133,53 @@ main {
     grid-template-areas:
       "agentes1 agentes1 img1"
       "img2 agentes2 agentes2";
-  
+
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
+@media screen and (min-width: 768px) {
+  #img2_responsive{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  #agentes {
+  .row {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  #img1{
+    width: 200%;
+  }
+
+  #img2 {
+    display: none;
+  }
+
+  #img2_responsive{
+    width: 80%;
+  }
 }
 
+.imgChicaMain{
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
 
-
-#agentes1 {
+/* #agentes1 {
   grid-area: agentes1;
   padding: 30px;
 }
 
 #agentes2 {
-  grid-area: agentes2;
   padding: 30px;
 }
 #img1 {
-  grid-area: img1;
   width: 80%;
   justify-self: center;
   align-self: center;
@@ -180,7 +204,7 @@ main {
   #img2_responsive{
     width: 80%;
   }
-}
+} */
 
 .imgChica {
   width: 50%;
@@ -250,18 +274,18 @@ footer{
     top: 0px;
 }
 50%{
-   
-   left: 300px; 
+
+   left: 300px;
    top: 0;
 }
 75%{
-   
+
     left: 0px;
     top: 0px;
 }
 100%{
-    
+
     left: 0px;
     top: 0px;
-}   
+}
 }
