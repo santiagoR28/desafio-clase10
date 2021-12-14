@@ -1,8 +1,7 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-
 
 #grilla {
   display: grid;
@@ -35,9 +34,15 @@
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .links:link {
@@ -59,7 +64,12 @@
 }
 
 .titulosSection {
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   color: white;
   text-align: center;
   font-size: 22px;
@@ -68,7 +78,7 @@
 .textos {
   font-size: 15px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 main {
@@ -77,7 +87,11 @@ main {
 }
 
 .tituloMain {
-  background: linear-gradient(90deg, rgba(12,0,0,1) 35%, rgba(255,0,0,1) 65%);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 0, 0, 1) 35%,
+    rgba(255, 0, 0, 1) 65%
+  );
   color: white;
   height: 60px;
   text-align: center;
@@ -86,7 +100,7 @@ main {
   margin-right: 0px;
 }
 
-.h1-animacion{
+.h1-animacion {
   display: inline;
   animation-name: titulomain;
   animation-duration: 4s;
@@ -96,39 +110,36 @@ main {
 }
 
 @keyframes titulomain {
-  0%{
+  0% {
     left: 0;
     top: 0;
-}
-25%{
+  }
+  25% {
     color: black;
     left: 300px;
     top: 0px;
-}
-50%{
-
-   left: 300px;
-   top: 0;
-}
-75%{
-
+  }
+  50% {
+    left: 300px;
+    top: 0;
+  }
+  75% {
     left: 0px;
     top: 0px;
-}
-100%{
-
+  }
+  100% {
     left: 0px;
     top: 0px;
-}
+  }
 }
 
-#imagenCentrada{
+#imagenCentrada {
   justify-self: center;
   align-self: center;
 }
 
 @media screen and (min-width: 768px) {
-  #img2_responsive{
+  #img2_responsive {
     display: none;
   }
 }
@@ -139,8 +150,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
-  #img1{
+  #img1 {
     width: 200%;
   }
 
@@ -148,20 +160,19 @@ main {
     display: none;
   }
 
-  #img2_responsive{
+  #img2_responsive {
     width: 80%;
   }
 }
 
-.imgChicaMain{
+.imgChicaMain {
   width: 80%;
   justify-self: center;
   align-self: center;
 }
 
 .imgChica {
-  width: 50%;
-  height: 60%;
+  width: 250px;
 }
 
 section {
@@ -173,11 +184,11 @@ section {
   font-size: 110%;
 }
 
-.letraCentrada{
+.letraCentrada {
   text-align: center;
 }
 
-#imgChica{
+#imgChica {
   width: 50%;
 }
 
@@ -187,19 +198,20 @@ section {
   text-decoration: underline rgb(0, 221, 221);
 }
 
-footer{
+footer {
   background-color: black;
   margin-top: 15px;
 }
-#textFooter{
+#textFooter {
   color: white;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 40px;
   height: 100px;
 }
 
-.animacionFooter{
+.animacionFooter {
   display: inline;
   animation-name: footer;
   animation-duration: 4s;
@@ -208,28 +220,25 @@ footer{
   animation-iteration-count: infinite;
 }
 @keyframes footer {
-  0%{
+  0% {
     left: 0;
     top: 0;
-}
-25%{
+  }
+  25% {
     color: red;
     left: 300px;
     top: 0px;
-}
-50%{
-
-   left: 300px;
-   top: 0;
-}
-75%{
-
+  }
+  50% {
+    left: 300px;
+    top: 0;
+  }
+  75% {
     left: 0px;
     top: 0px;
-}
-100%{
-
+  }
+  100% {
     left: 0px;
     top: 0px;
-}
+  }
 }
