@@ -3,6 +3,9 @@
   padding: 0;
 }
 
+$tipografia: Arial, Helvetica, sans-serif;
+$tamaño-letra: 22px;
+
 #grilla {
   display: grid;
   grid-area: "header" "section" "main" "footer";
@@ -12,23 +15,36 @@
   display: flex;
   height: 700px;
   justify-content: end;
+
   margin-left: 50px;
   margin-right: 50px;
   padding: 50px;
+
   background-image: url("https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Wallpaper-Boys-Dark-Display.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
   margin-bottom: 10px;
 }
 
-header nav a button:hover {
-  font-size: 30px;
-  width: 100px;
-  height: 50px;
-  background-color: blue;
-  color: white;
+//NESTING, &
+
+header {
+  nav {
+    a {
+      button {
+        &:hover {
+          font-size: 30px;
+          width: 100px;
+          height: 50px;
+          background-color: blue;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 .boton {
@@ -57,6 +73,7 @@ header nav a button:hover {
     background-position: 0 0;
   }
 }
+
 .links:link {
   color: white;
 }
@@ -70,20 +87,26 @@ header nav a button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-left: 50px;
   margin-right: 50px;
 }
 
 .titulosSection {
-  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   color: white;
   text-align: center;
-  font-size: 22px;
+  font-size: $tamaño-letra;
 }
 
 .textos {
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $tipografia;
 }
 
 main {
@@ -92,7 +115,11 @@ main {
 }
 
 .tituloMain {
-  background: linear-gradient(90deg, #0c0000 35%, red 65%);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 0, 0, 1) 35%,
+    rgba(255, 0, 0, 1) 65%
+  );
   color: white;
   height: 60px;
   text-align: center;
@@ -133,6 +160,7 @@ main {
     top: 0px;
   }
 }
+
 #imagenCentrada {
   justify-self: center;
   align-self: center;
@@ -143,6 +171,7 @@ main {
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
   .row {
     display: flex;
@@ -151,7 +180,6 @@ main {
     align-items: center;
     text-align: center;
   }
-
   #img1 {
     width: 200%;
   }
@@ -164,14 +192,24 @@ main {
     width: 80%;
   }
 }
-main div p {
-  font-size: 20px;
-  color: red;
-  font-family: sans-serif;
-  text-align: center;
-}
-main ul li {
-  font-size: 14px;
+
+//NESTING
+
+main {
+  div {
+    p {
+      font-size: 20px;
+      color: red;
+      font-family: sans-serif;
+      text-align: center;
+    }
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+    }
+  }
 }
 
 .imgChicaMain {
@@ -203,15 +241,14 @@ section {
 
 .nombreMapas {
   font-size: 150%;
-  color: #00dddd;
-  text-decoration: underline #00dddd;
+  color: rgb(0, 221, 221);
+  text-decoration: underline rgb(0, 221, 221);
 }
 
 footer {
   background-color: black;
   margin-top: 15px;
 }
-
 #textFooter {
   color: white;
   text-align: center;
@@ -229,7 +266,6 @@ footer {
   position: relative;
   animation-iteration-count: infinite;
 }
-
 @keyframes footer {
   0% {
     left: 0;
@@ -253,5 +289,3 @@ footer {
     top: 0px;
   }
 }
-
-/*# sourceMappingURL=estilos.css.map */
