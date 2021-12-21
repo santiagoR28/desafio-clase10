@@ -37,7 +37,7 @@ header {
       button {
         &:hover {
           font-size: 30px;
-          width: 100px;
+          width: 120px;
           height: 50px;
           background-color: blue;
           color: white;
@@ -48,7 +48,7 @@ header {
 }
 
 .boton {
-  width: 80px;
+  width: 120px;
   height: 40px;
   font-size: 20px;
   color: black;
@@ -288,4 +288,91 @@ footer {
     left: 0px;
     top: 0px;
   }
+}
+
+//nosotros.html
+
+.margin {
+  margin: 50px;
+}
+
+@mixin formulario(
+  $m: 0px,
+  $p: 0,
+  $b: 0,
+  $ma: margin,
+  $pa: padding,
+  $ba: border
+) {
+  #{$ma}: $m;
+  #{$ba}: $b;
+  #{$pa}: $p;
+}
+
+#main {
+  @include formulario($p: 50px);
+
+  #contacto {
+    @include formulario(25px auto, 10px, 5px, border-radius);
+    display: grid;
+
+    input,
+    textarea {
+      @include formulario(none, 5px 10px, 1px solid black);
+    }
+    label {
+      padding: 6px;
+    }
+
+    background-color: rgb(180, 180, 255);
+  }
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.button {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  width: 150px;
+  height: 50px;
+  background-color: aquamarine;
+  text-align: center;
+  font-size: $tamaño-letra;
+  font-family: cursive;
+  color: black;
+  border-radius: 20px;
+  text-decoration: underline;
+}
+
+.button--limpiar {
+  @extend .button;
+}
+
+$titulos: (
+  h1: 60px,
+  h2: 50px,
+  h3: 40px,
+  h4: 30px,
+  h5: 20px,
+  h6: 10px,
+);
+
+$h1: map-get($titulos, h1);
+$h2: map-get($titulos, h2);
+$h3: map-get($titulos, h3);
+$h4: map-get($titulos, h4);
+$h5: map-get($titulos, h5);
+$h6: map-get($titulos, h6);
+
+.h2-map-get {
+  font-size: $h2;
 }

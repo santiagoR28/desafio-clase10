@@ -25,14 +25,14 @@
 
 header nav a button:hover {
   font-size: 30px;
-  width: 100px;
+  width: 120px;
   height: 50px;
   background-color: blue;
   color: white;
 }
 
 .boton {
-  width: 80px;
+  width: 120px;
   height: 40px;
   font-size: 20px;
   color: black;
@@ -215,8 +215,7 @@ footer {
 #textFooter {
   color: white;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 40px;
   height: 100px;
 }
@@ -252,6 +251,58 @@ footer {
     left: 0px;
     top: 0px;
   }
+}
+.margin {
+  margin: 50px;
+}
+
+#main {
+  margin: 0px;
+  border: 0;
+  padding: 50px;
+}
+#main #contacto {
+  border-radius: 25px auto;
+  border: 5px;
+  padding: 10px;
+  display: grid;
+  background-color: #b4b4ff;
+}
+#main #contacto input,
+#main #contacto textarea {
+  margin: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+#main #contacto label {
+  padding: 6px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.button, .button--limpiar {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 150px;
+  height: 50px;
+  background-color: aquamarine;
+  text-align: center;
+  font-size: 22px;
+  font-family: cursive;
+  color: black;
+  border-radius: 20px;
+  text-decoration: underline;
+}
+
+.h2-map-get {
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
